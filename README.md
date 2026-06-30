@@ -1,4 +1,4 @@
-This is a trello style board app to add tasks to alongside the boilerplate logic that is added when creating a new project so the styling stays the same.
+This is a Trello style board app to add tasks to and it is alongside the boilerplate setup that is added when creating a new project so the styling stays nice instead of blank.
 # Real-Time Collaborative Kanban Board (Modern MEAN Stack)
 
 A highly responsive full-stack application engineered to showcase modern web capabilities: event-driven data streaming via WebSockets, fine-grained UI reactivity using Angular 21 Signals, and server-side metrics calculations through MongoDB Aggregation Pipelines.
