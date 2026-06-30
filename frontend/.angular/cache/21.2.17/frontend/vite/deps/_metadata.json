@@ -1,0 +1,52 @@
+{
+  "hash": "6cc5b980",
+  "configHash": "535cc8cd",
+  "lockfileHash": "f84d2106",
+  "browserHash": "b5816045",
+  "optimized": {
+    "@angular/common/http": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "8524fde1",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "d21612c5",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "60e07558",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "3dffdc4a",
+      "needsInterop": false
+    },
+    "socket.io-client": {
+      "src": "../../../../../../node_modules/socket.io-client/build/esm/index.js",
+      "file": "socket__io-client.js",
+      "fileHash": "c4dd2ae3",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-BFWNZT2W": {
+      "file": "chunk-BFWNZT2W.js"
+    },
+    "chunk-C56B7IRF": {
+      "file": "chunk-C56B7IRF.js"
+    },
+    "chunk-5M4XYY5R": {
+      "file": "chunk-5M4XYY5R.js"
+    },
+    "chunk-KWSTWQNB": {
+      "file": "chunk-KWSTWQNB.js"
+    }
+  }
+}
