@@ -7,6 +7,7 @@ import { Task } from './task.model.js';
 
 const app = express();
 const PORT = 3000;
+const dbName = process.env.NODE_ENV === 'test' ? 'realtime_board_integration_db' : 'realtime_board';
 
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
@@ -16,9 +17,14 @@ const io = new Server(httpServer, {
 app.use(cors({ origin: 'http://localhost:4200' }));
 app.use(express.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/realtime_board')
-  .then(() => console.log('🍃 MongoDB Connected'))
-  .catch(err => console.error(err));
+mongoose.connect(`mongodb://127.0.0.1:27017/${dbName}`)
+  .then(() => {
+    // Suppress console logs during testing to keep the pipeline runner clean
+    if (process.env.NODE_ENV !== 'test') {
+      console.log(`🍃 MongoDB Connected Successfully to: ${dbName}`);
+    }
+  })
+  .catch(err => console.error('MongoDB connection error:', err));
 
 app.get('/api/tasks', async (req, res) => {
   const tasks = await Task.find();
