@@ -1,0 +1,70 @@
+{
+  "hash": "cfd6f071",
+  "configHash": "8f6e25e1",
+  "lockfileHash": "3023ee69",
+  "browserHash": "aef822ed",
+  "optimized": {
+    "@angular/cdk/drag-drop": {
+      "src": "../../../../../../node_modules/@angular/cdk/fesm2022/drag-drop.mjs",
+      "file": "@angular_cdk_drag-drop.js",
+      "fileHash": "4722bbef",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "13583096",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "6f4009ee",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "deee6f90",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "5d4c4fd3",
+      "needsInterop": false
+    },
+    "socket.io-client": {
+      "src": "../../../../../../node_modules/socket.io-client/build/esm/index.js",
+      "file": "socket__io-client.js",
+      "fileHash": "b00ba88c",
+      "needsInterop": false
+    },
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "8f0cb259",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-HZFGVLL2": {
+      "file": "chunk-HZFGVLL2.js"
+    },
+    "chunk-LV7GOGGC": {
+      "file": "chunk-LV7GOGGC.js"
+    },
+    "chunk-2XXWLV2M": {
+      "file": "chunk-2XXWLV2M.js"
+    },
+    "chunk-XNXTJPUK": {
+      "file": "chunk-XNXTJPUK.js"
+    },
+    "chunk-EVJM7HTC": {
+      "file": "chunk-EVJM7HTC.js"
+    },
+    "chunk-NILDOHVQ": {
+      "file": "chunk-NILDOHVQ.js"
+    }
+  }
+}

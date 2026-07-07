@@ -21,6 +21,7 @@ export class BoardService {
   
   // Writable signal holding our client-side task array state
   tasks = signal<Task[]>([]);
+  activities = signal<any[]>([]);
 
   constructor() {
     // Connect to the local WebSocket server
@@ -39,6 +40,20 @@ export class BoardService {
         currentTasks.map((t) => (t._id === updatedTask._id ? updatedTask : t))
       );
     });
+    
+    this.http.get<any[]>('http://localhost:3000/api/activities').subscribe({
+      next: (history) => this.activities.set(history)
+    });
+
+    this.socket.on('activityLogged', (log: any) => {
+      this.activities.update((current) => [log, ...current.slice(0, 9)]); // Keep rolling top 10 items
+    });
+
+    this.socket.on('boardPurged', () => {
+      this.tasks.set([]);      // Clear task signals
+      this.activities.set([]); // Clear audit trails
+    });
+
   }
 
   private fetchInitialTasks(): void {
@@ -51,11 +66,17 @@ export class BoardService {
     return this.http.post<Task>('http://localhost:3000/api/tasks', task);
   }
 
-  updateTaskStatus(id: string, status: string): Observable<Task> {
-    return this.http.patch<Task>(`http://localhost:3000/api/tasks/${id}`, { status });
+  updateTaskStatus(id: string, status: string, updatedBy: string): Observable<Task> {
+    // Send both the next status state and the user name inside the payload object
+    return this.http.patch<Task>(`http://localhost:3000/api/tasks/${id}`, { status, updatedBy });
   }
 
   getAnalytics(): Observable<any[]> {
     return this.http.get<any[]>('http://localhost:3000/api/analytics/stats');
   }
+
+  purgeEntireBoard(): Observable<any> {
+  return this.http.delete('http://localhost:3000/api/tasks');
+  }
+
 }
