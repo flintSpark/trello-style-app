@@ -10,6 +10,7 @@ export interface Task {
   status: 'todo' | 'progress' | 'done';
   assignedTo: string;
   points: number;
+  priority: 'low' | 'medium' | 'high';
 }
 
 @Injectable({
